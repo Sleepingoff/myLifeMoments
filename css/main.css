@@ -1,0 +1,95 @@
+main{
+    padding: 5rem;
+}
+main > .wrap{
+    margin-top: 80px;
+    /* flex-wrap: wrap; */
+}
+.box div{
+    border: 1px solid black;
+    width: 200px;
+    min-height: 15vw;
+}
+.box button{
+    border: 1px solid black;
+    width: 200px;
+    min-height: 15vw;
+    background-color: white;
+}
+.box input{
+    border: 1px solid black;
+    width: 200px;
+    min-height: 15vw;
+    background-color: white;
+}
+.box .h3{
+    margin: 0.5rem 0;
+}
+.box div p:nth-of-type(1){
+    font-size: 0.8em;
+    margin: calc(15vw / 2 - 0.8em) 0;
+}
+.box1{
+    overflow: hidden;
+    position: relative;
+}
+.box1 .onbox1{
+    width: 100%;
+    height: 15vw;
+    background: rgba(0, 0, 0, 0.475);
+    color: white;
+    position: absolute;
+    top: 100%;
+    transition: all 0.5s;
+}
+.box1:hover .onbox1{
+    top: 0;
+}
+.box2:active{
+    box-shadow: inset -2px -2px 5px #555,
+                inset 2px 2px 5px #ccc;
+}
+.box3:focus{
+    background: #ccc;
+}
+.box3:placeholder-shown{
+    padding: 30%;
+}
+.box4{
+    position: sticky;
+    top: 150px;
+}
+.boxwrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(200px + 20%);
+}
+.prev{
+    border: 1px solid #ccc;
+    border-top: transparent;
+    border-right: transparent;
+    background-color: transparent;
+    padding: 20px;
+    transform: rotate(45deg);
+}
+ul.wrap{
+    transform: translateX(calc((200px + 40%) / 2 - (200px + 20px) / 2));
+}
+.box{
+    width: 200px;
+    margin: 0 20px;
+    transform: scale(0.8);
+}
+.next{
+    border: 1px solid #ccc;
+    border-bottom: transparent;
+    border-left: transparent;
+    background-color: transparent;
+    padding: 20px;
+    transform: rotate(45deg);
+}
+.currentbox{
+    transform: scale(1.2);
+}

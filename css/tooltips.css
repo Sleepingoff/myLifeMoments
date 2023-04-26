@@ -1,0 +1,41 @@
+.tooltips{
+    position: relative;
+}
+.tooltipDown{
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    background: #ccc;
+    top: 2em;
+    right: calc(-150px / 2 + 1em);
+    padding: 1em;
+}
+.tooltipDown::before{
+    content: "";
+    display: block;
+    width: 0.5px;
+    border-top: none;
+    border-bottom: 1em solid #ccc;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    position: absolute;
+    top: calc(-10px - 5px);
+    right: calc(150px / 2 - 1em);
+}
+.tooltipDown span{}
+.tooltipDown span::after{
+    content: "";
+    display: block;
+    width: calc(150px * 0.8);
+    height: 0.1em;
+    background: white;
+    margin: 0.5em 0;
+}
+.tooltipIndex li:nth-child(n+1){
+    padding-bottom: 0.5em;
+    font-size: 0.8em;
+}
+.tooltips:hover .tooltipDown{
+    visibility: visible;
+}

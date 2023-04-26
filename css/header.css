@@ -1,0 +1,75 @@
+header{
+    width: 100%;
+    height: 80px;
+    box-shadow: 2px 2px 5px #ccc;
+    /* position: fixed; */
+    z-index: 10;
+    background: white;
+    align-items: start;
+    justify-content: center;
+}
+.wrap{
+    width: 100%;
+    min-height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+figure{
+    width: 5%;
+}
+figure img{
+    width: 100%;
+}
+.h1{
+    width: 10%;
+}
+.gnb{
+    width: 55%;
+    justify-content: flex-start;
+}
+.gnb>li{
+    width: calc(90% / 3 - 1rem * 2 / 3);
+    padding: 0.5rem;
+    position: relative;
+}
+.gnb li:hover{
+    color: navy;
+}
+.lnb{
+    display: none;
+}
+.lnb li{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.lnb li a{
+    height: 100%;
+    border-left: 2px solid #ccc;
+}
+.lnb li:hover a{
+    color: navy;
+    border-left: 2px solid navy;
+}
+.gnb500{
+    height: 160px;
+}
+.gnblnb{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+}
+.profile{
+    width: 20%;
+}
+.profile li{
+    margin: 0 0.5em;
+    text-align: center;
+}

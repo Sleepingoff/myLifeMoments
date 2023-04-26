@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>study0412</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/tooltips.css">
+    <!-- 900px mediaquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".gnb").hover(function(){
+          $("header").addClass("gnb500");
+          $(".lnb").addClass("gnblnb");
+        });
+        $("header").mouseleave(function(){
+          $("header").removeClass("gnb500");
+          $(".lnb").removeClass("gnblnb");
+        });
+      });
+    </script>
+    <script type="text/javascript" src="js/boxmoving.js"></script>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="wrap flex ha">
+        <figure>
+          <figcaption class="hide">logo</figcaption>
+          <img src="" alt="#" />
+        </figure>
+        <h1 class="h1">LOGO</h1>
+        <ul class="gnb flex bold textcenter">
+          <li>
+            HTML
+            <ol class="lnb flex">
+              <li><a href="" class="block flex">개념</a></li>
+              <li><a href="" class="block">태그</a></li>
+            </ol>
+          </li>
+          <li>
+            CSS
+            <ol class="lnb flex">
+              <li><a href="" class="block">우선순위</a></li>
+              <li><a href="" class="block">스타일</a></li>
+            </ol>
+          </li>
+          <li>
+            Javascript
+            <ol class="lnb flex">
+              <li><a href="" class="block">개념</a></li>
+              <li><a href="" class="block">예제</a></li>
+            </ol>
+          </li>
+        </ul>
+        <ul class="profile flex">
+          <li  class="tooltips">
+            소식
+            <div class="tooltipDown">
+              <span class="textcenter">새로운 소식</span>
+              <ul class="tooltipIndex">
+                <li><a href="">click 바로가기</a></li>
+                <li><a href="">두번째 소식</a></li>
+                <li><a href="">세번째 소식</a></li>
+                <li><a href="">네번째 소식</a></li>
+                <li><a href="">다섯번째 소식</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>다섯글자야</li>
+          <li class="hide">사진</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <ul class="wrap flex ha">
+        <li class="box textcenter">
+          <h3 class="h3">hover 상자</h3>
+          <div class="box1">
+            <p>첫번째 상자</p>
+            <p class="onbox1">올라갑니다</p>
+          </div>
+        </li>
+        <li class="box textcenter">
+          <h3 class="h3">active 상자</h3>
+          <a href=""><button class="box2" type="button">두번째 상자</button></a>
+        </li>
+        <li class="box textcenter">
+          <h3 class="h3">focus 상자</h3>
+          <input class="box3" placeholder="세번째 상자"></input>
+        </li>
+        <li class="box textcenter">
+          <h3 class="h3">그냥 상자</h3>
+          <div class="box4">
+            <p>네번째 상자</p>
+          </div>
+        </li>
+        <li class="box textcenter">
+          <h3 class="h3">그냥 상자</h3>
+          <div class="box4">
+            <p>다섯번째 상자</p>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
