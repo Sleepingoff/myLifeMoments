@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $("header").hover(function(){
+      $("header").addClass("gnb500");
+      $(".lnb").addClass("gnblnb");
+    });
+    $("header").mouseleave(function(){
+      $("header").removeClass("gnb500");
+      $(".lnb").removeClass("gnblnb");
+    });
+  });

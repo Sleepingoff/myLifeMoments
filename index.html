@@ -9,22 +9,13 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/movingbox.css">
     <link rel="stylesheet" href="css/tooltips.css">
     <!-- 900px mediaquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $(".gnb").hover(function(){
-          $("header").addClass("gnb500");
-          $(".lnb").addClass("gnblnb");
-        });
-        $("header").mouseleave(function(){
-          $("header").removeClass("gnb500");
-          $(".lnb").removeClass("gnblnb");
-        });
-      });
-    </script>
+    <script type="text/javascript" src="js/header.js"></script>
     <script type="text/javascript" src="js/boxmoving.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
   </head>
   <body>
     <header class="flex">
@@ -77,6 +68,10 @@
       </div>
     </header>
     <main>
+      <div class="clock wrap textcenter">
+        <h1 class="h1"></h1>
+        <h3 class="h3"></h3>
+      </div>
       <ul class="wrap flex ha">
         <li class="box textcenter">
           <h3 class="h3">hover 상자</h3>

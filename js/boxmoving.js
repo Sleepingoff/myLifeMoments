@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
         currentIndex = (-clickCount)+1;
         $(movingBox).css({"transform" : "translateX("+ (clickCount * boxSize + middleDistance) +"px)"});
-        $("ul.wrap li.box:nth-child("+currentIndex+")").addClass("currentBox");
-        $("ul.wrap li.box:nth-child("+currentIndex+")").siblings().removeClass("currentBox");
+        $("ul.wrap li.box:nth-child("+currentIndex+")").removeClass("blurEffect").addClass("currentBox");
+        $("ul.wrap li.box:nth-child("+currentIndex+")").siblings().removeClass("currentBox").addClass("blurEffect");
     });
 });
