@@ -36,3 +36,7 @@
     filter: blur(5px);
     -webkit-filter: blur(5px);
 }
+input{
+    padding: 10px;
+    margin: 0 5px;
+}
