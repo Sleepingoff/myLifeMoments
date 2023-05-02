@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/movingbox.css">
-    <link rel="stylesheet" href="css/tooltips.css">
+    <link rel="stylesheet" href="css/movingbox.css" />
+    <link rel="stylesheet" href="css/tooltips.css" />
+    <link rel="stylesheet" href="css/submit.css" />
     <!-- 900px mediaquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/header.js"></script>
@@ -68,39 +69,51 @@
       </div>
     </header>
     <main>
-      <div class="clock wrap textcenter">
-        <h1 class="h1"></h1>
-        <h3 class="h3"></h3>
-      </div>
-      <ul class="wrap flex ha">
-        <li class="box textcenter">
-          <h3 class="h3">hover 상자</h3>
-          <div class="box1">
-            <p>첫번째 상자</p>
-            <p class="onbox1">올라갑니다</p>
+      <section class="wrap flex">
+        <div class="wrap">
+          <div class="clock textcenter">
+            <h1 class="h1"></h1>
+            <h3 class="h3"></h3>
           </div>
-        </li>
-        <li class="box textcenter">
-          <h3 class="h3">active 상자</h3>
-          <a href=""><button class="box2" type="button">두번째 상자</button></a>
-        </li>
-        <li class="box textcenter">
-          <h3 class="h3">focus 상자</h3>
-          <input class="box3" placeholder="세번째 상자"></input>
-        </li>
-        <li class="box textcenter">
-          <h3 class="h3">그냥 상자</h3>
-          <div class="box4">
-            <p>네번째 상자</p>
-          </div>
-        </li>
-        <li class="box textcenter">
-          <h3 class="h3">그냥 상자</h3>
-          <div class="box4">
-            <p>다섯번째 상자</p>
-          </div>
-        </li>
-      </ul>
+          <form action="" id="login-form" class="flex">
+            <input class="block" required maxlength="15" type="text" placeholder="Write your name!" />
+            <input class="block" type="submit" value="Log In">
+          </form>
+          <h1 id="greeting" class="h1 hide textcenter"></h1>
+        </div>
+        <ul class="wrap flex ha">
+          <li class="box textcenter">
+            <h3 class="h3">hover 상자</h3>
+            <div class="box1">
+              <p>첫번째 상자</p>
+              <p class="onbox1">올라갑니다</p>
+            </div>
+          </li>
+          <li class="box textcenter">
+            <h3 class="h3">active 상자</h3>
+            <a href=""><button class="box2" type="button">두번째 상자</button></a>
+          </li>
+          <li class="box textcenter">
+            <h3 class="h3">focus 상자</h3>
+            <input class="box3" placeholder="세번째 상자"></input>
+          </li>
+          <li class="box textcenter">
+            <h3 class="h3">그냥 상자</h3>
+            <div class="box4">
+              <p>네번째 상자</p>
+            </div>
+          </li>
+          <li class="box textcenter">
+            <h3 class="h3">그냥 상자</h3>
+            <div class="box4">
+              <p>다섯번째 상자</p>
+            </div>
+          </li>
+        </ul>
+        
+        <script src="js/submit.js"></script>
+        <script src="js/todos.js"></script>
+      </section>
     </main>
   </body>
 </html>

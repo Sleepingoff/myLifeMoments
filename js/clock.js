@@ -14,6 +14,5 @@ $(document).ready(function(){
         let sec = new Date().getSeconds();
         $(".clock .h3").text(hour+" : "+min+" : "+sec);
     }
-
 });
 

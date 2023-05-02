@@ -1,9 +1,14 @@
 main{
     padding: 5rem;
 }
-main > .wrap{
+section.wrap.flex{
     margin-top: 80px;
     width: 1100px;
+    justify-content: space-between;
+    align-items: center;
+}
+section > .wrap{
+    width: calc(100% / 3 - 10px);
 }
 .clock{
     margin: 0 auto;
