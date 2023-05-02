@@ -2,7 +2,7 @@ const toDoList = document.querySelector("#todo-list");
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 //saving todo
-const toDos = [];
+let toDos = [];
 const  DOTO_KEY = "toDos";
 function saveToDos(){
     //Array -> string
@@ -42,6 +42,7 @@ const savedToDos = localStorage.getItem(DOTO_KEY);
 if(savedToDos){
     //string to Object in this case, Array
     const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
     //show the array
-    parsedToDos.forEach((e) => paintToDo(e));
+    parsedToDos.forEach(paintToDo);
 }
