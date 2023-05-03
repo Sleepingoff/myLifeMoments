@@ -7,8 +7,9 @@ function clearStorage(){
     localStorage.clear();
 }
 clear.addEventListener("click", clearStorage);
-//saving todo : no more array
-//let toDos = [];
+//saving todo
+let toDos = [];
+let toDoObj = {};
 const  DOTO_KEY = "toDos";
 function saveToDos(){
     //Array -> string
@@ -34,7 +35,7 @@ function handleToDoSubmit(event){
     const toDoValue = toDoInput.value;
     toDoInput.value = "";
     //toDo를 array가 아닌 obj의 text로 추가하며, 개별로 아이디를 만들어 구별이 가능하도록 하기. 아이디는 랜덤한 숫자
-    const toDoObj = {text: toDoValue, id: Date.now()};
+    toDoObj = {text: toDoValue, id: Date.now()};
     toDos.push(toDoObj);
     paintToDo(toDoObj);
     saveToDos();
@@ -44,12 +45,12 @@ function handleToDoSubmit(event){
 function deleteList(event){
     const target = event.target.parentElement;
     const targetId = target.id;
+    target.remove();
     //targetId와 obj의 id가 일치하면 해당 아이템만 "제외시키기"
-    console.log(targetId);
-    const removeTarget = target.filter(targetId);
-    removeTarget.remove();
+    //targetId의 type은 string이다!! 타입이 일치하지 않아서 제대로 동작하지 않았던 것
+    toDos = toDos.filter((toDoObj) => toDoObj.id !== parseInt(targetId));
+    saveToDos();
 }
-
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(DOTO_KEY);
