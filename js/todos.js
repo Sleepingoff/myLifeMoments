@@ -1,8 +1,14 @@
 const toDoList = document.querySelector("#todo-list");
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
-//saving todo
-let toDos = [];
+const clear = document.querySelector("#clear");
+//localStorage delete All
+function clearStorage(){
+    localStorage.clear();
+}
+clear.addEventListener("click", clearStorage);
+//saving todo : no more array
+//let toDos = [];
 const  DOTO_KEY = "toDos";
 function saveToDos(){
     //Array -> string
@@ -34,10 +40,14 @@ function handleToDoSubmit(event){
     saveToDos();
 }
 //할 일 삭제하기
-//먼저 obj의 아이디를 가져오도록 다시 설정해야함
+//먼저 버튼 클릭시 obj의 아이디를 가져오도록 다시 설정해야함
 function deleteList(event){
     const target = event.target.parentElement;
-    target.remove();
+    const targetId = target.id;
+    //targetId와 obj의 id가 일치하면 해당 아이템만 "제외시키기"
+    console.log(targetId);
+    const removeTarget = target.filter(targetId);
+    removeTarget.remove();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
