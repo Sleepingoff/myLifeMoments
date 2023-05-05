@@ -1,0 +1,6 @@
+@media screen and (max-width: 900px){
+    section.wrap.flex{
+        flex-direction: column;
+        width: auto;
+    }
+}
