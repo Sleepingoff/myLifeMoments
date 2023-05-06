@@ -1,7 +1,75 @@
-.insideBox{
-    border: 1px solid #070707;
-    padding: 60px 0px;
+#home div.flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-h1.insideBox{
+#home h2.insideBox{
+    padding: 60px 0px;
     width: 950px;
+}
+#home div.p14{
+    margin-left: 200px;
+    align-self: flex-start;
+}
+#home div.p18{
+    padding: 36px 30px;
+    margin-top: 45px;
+    margin-right: 80px;
+    align-self: flex-end;
+}
+#about div.wrap{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#about div.p18{
+    align-self: flex-start;
+    padding: 36px 24px;
+    margin-left: 70px;
+}
+#about div.p14{
+    margin-bottom: 50px;
+}
+#about div.p14:nth-of-type(2){
+    align-self: flex-start;
+    margin-left: 100px;
+}
+#about div.p14:nth-of-type(3){
+    align-self: flex-end;
+}
+#about div.p14:nth-of-type(4){
+    align-self: flex-start;
+}
+#about div.wrap div.carousel{
+    width: 1100px;
+    overflow: hidden;
+    position: relative;
+}
+#about div.wrap div.carousel::before{
+    content: "<";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0; top: 50%;
+}
+#about div.wrap div.carousel::after{
+    content: ">";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0; top: 50%;
+}
+#about ul.flex{
+    width: calc((300px + 20px) * 5);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#about div.carousel ul li{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
 }

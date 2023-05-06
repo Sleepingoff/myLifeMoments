@@ -48,6 +48,8 @@ table {
 }
 *{
     box-sizing: border-box;
+	font-family: 'Nanum Pen Script', cursive;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 a{
 	text-decoration: none;

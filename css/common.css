@@ -1,7 +1,11 @@
 section.wrap{
     max-width: 1100px;
     min-width: 360px;
-    margin-top: 100px;
+    margin-top: 80px;
+}
+.insideBox{
+    border: 1px solid #070707;
+    margin-bottom: 20px;
 }
 .border-50px{
     border-radius: 50px;
@@ -27,16 +31,28 @@ section.wrap{
 .textcenter{
     text-align: center;
 }
+.textright{
+    text-align: right;
+}
 .h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 .h2{
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: 600;
 }
 .h3{
-    font-size: 1.2em;
+    font-size: 16px;
     font-weight: 550;
+}
+.p14{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.5;
+}
+.p18{
+    font-size: 18px;
+    line-height: 1.2;
 }
 .blurEffect {
     filter: blur(5px);
