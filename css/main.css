@@ -1,0 +1,7 @@
+.insideBox{
+    border: 1px solid #070707;
+    padding: 60px 0px;
+}
+h1.insideBox{
+    width: 950px;
+}
