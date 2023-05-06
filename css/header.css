@@ -7,6 +7,7 @@ header{
     background: white;
     align-items: start;
     justify-content: center;
+    position: fixed;
 }
 .wrap{
     width: 100%;
@@ -30,26 +31,9 @@ header .h1{
 .gnb>li{
     width: calc(90% / 3 - 1rem * 2 / 3);
     padding: 0.5rem;
-    position: relative;
 }
-.gnb li:hover{
+.gnb li:hover a{
     color: navy;
-}
-.lnb{
-    display: none;
-}
-.lnb li{
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-}
-.lnb li a{
-    height: 100%;
-    border-left: 2px solid #ccc;
-}
-.lnb li:hover a{
-    color: navy;
-    border-left: 2px solid navy;
 }
 .gnb500{
     height: 160px;
