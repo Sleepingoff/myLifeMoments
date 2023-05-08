@@ -1,6 +1,3 @@
-main{
-    padding: 5rem;
-}
 section.wrap.flex{
     margin-top: 80px;
     width: 1100px;
@@ -9,7 +6,4 @@ section.wrap.flex{
 }
 section > .wrap{
     width: calc(100% / 3 - 10px);
-}
-.clock{
-    margin: 0 auto;
 }

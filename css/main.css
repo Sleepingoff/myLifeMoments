@@ -1,3 +1,7 @@
+div.wrap{
+    position: relative;
+    width: 100%;
+}
 #home div.flex{
     flex-direction: column;
     justify-content: center;
@@ -23,17 +27,28 @@
     justify-content: space-between;
     align-items: center;
 }
+#smallegg{
+    position: absolute;
+    z-index: -1;
+    left: -30%; top: -100%;
+    transform: scale(0.8) rotate(-30deg);
+}
 #about div.p18{
     align-self: flex-start;
     padding: 36px 24px;
-    margin-left: 70px;
+    margin-left: 100px;
+    position: relative;
+    background-color: white;
 }
 #about div.p14{
     margin-bottom: 50px;
 }
+#about div.textright{
+    margin: 80px 0;
+}
 #about div.p14:nth-of-type(2){
     align-self: flex-start;
-    margin-left: 100px;
+    margin-left: 130px;
 }
 #about div.p14:nth-of-type(3){
     align-self: flex-end;
@@ -72,4 +87,49 @@
     width: 300px;
     height: 300px;
     border-radius: 10px;
+}
+#bigegg{
+    position: absolute;
+    left: -20%;
+    top: -10%;
+    z-index: -1;
+}
+#record div.p18{
+    padding: 36px 30px;
+    width: 440px;
+}
+#record div.p18:nth-of-type(1){
+
+}
+#record div.p18:nth-of-type(3){
+    margin-top: 480px;
+    margin-left: 20%;
+}
+#record div.p18:nth-of-type(4){
+    margin-left: 40%;
+}
+#record div.p18:nth-of-type(5){
+    margin-top: 500px;
+}
+#record div.p14{
+    margin-left: 30px;
+}
+#final div.insideBox{
+    width: 150px;
+    height: 60px;
+    margin-left: 30%;
+    margin-bottom: 30px;
+}
+#final div.insideBox:nth-of-type(2){
+    width: 220px;
+    height: 80px;
+    margin-left: 35%;
+    margin-bottom: 50px;
+}
+#final h2.insideBox{
+    padding: 60px 40px;
+    width: 1100px;
+}
+#final{
+    margin-bottom: 100px;
 }
