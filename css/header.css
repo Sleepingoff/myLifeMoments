@@ -8,6 +8,7 @@ header{
     align-items: start;
     justify-content: center;
     position: fixed;
+    top: 0;
 }
 .wrap{
     width: 100%;

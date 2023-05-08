@@ -1,7 +1,3 @@
-div.wrap{
-    position: relative;
-    width: 100%;
-}
 #home div.flex{
     flex-direction: column;
     justify-content: center;
@@ -90,8 +86,8 @@ div.wrap{
 }
 #bigegg{
     position: absolute;
-    left: -20%;
-    top: -10%;
+    left: -200px;
+    top: -200px;
     z-index: -1;
 }
 #record div.p18{
@@ -103,10 +99,10 @@ div.wrap{
 }
 #record div.p18:nth-of-type(3){
     margin-top: 480px;
-    margin-left: 20%;
+    margin-left: 300px;
 }
 #record div.p18:nth-of-type(4){
-    margin-left: 40%;
+    margin-left: 400px;
 }
 #record div.p18:nth-of-type(5){
     margin-top: 500px;

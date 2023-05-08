@@ -1,7 +1,14 @@
+main{
+    padding: 5rem;
+}
 section{
     max-width: 1100px;
     min-width: 360px;
     margin-top: 80px;
+}
+div.wrap{
+    position: relative;
+    width: 100%;
 }
 .insideBox{
     border: 1px solid #070707;

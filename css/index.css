@@ -1,7 +1,6 @@
-section.wrap.flex{
-    margin-top: 80px;
-    width: 1100px;
-    justify-content: space-between;
+aside.flex{
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 section > .wrap{
