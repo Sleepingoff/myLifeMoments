@@ -50,7 +50,8 @@
     align-self: flex-end;
 }
 #about div.p14:nth-of-type(4){
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    margin-top: 100px;
 }
 #about div.wrap div.carousel{
     width: 1100px;
@@ -58,26 +59,29 @@
     position: relative;
 }
 #about div.wrap div.carousel::before{
-    content: "<";
+    content: "";
     display: block;
     width: 40px;
     height: 40px;
+    background: url(../img/prev.svg);
     position: absolute;
-    left: 0; top: 50%;
+    left: 0; top: 40%;
 }
 #about div.wrap div.carousel::after{
-    content: ">";
+    content: "";
     display: block;
     width: 40px;
     height: 40px;
+    background: url(../img/next.svg);
     position: absolute;
-    right: 0; top: 50%;
+    right: 0; top: 40%;
 }
 #about ul.flex{
     width: calc((300px + 20px) * 5);
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-left: 40px;
 }
 #about div.carousel ul li{
     width: 300px;
