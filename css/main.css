@@ -113,13 +113,13 @@
 #final div.insideBox{
     width: 150px;
     height: 60px;
-    margin-left: 30%;
+    margin-left: 400px;
     margin-bottom: 30px;
 }
 #final div.insideBox:nth-of-type(2){
     width: 220px;
     height: 80px;
-    margin-left: 35%;
+    margin-left: 500px;
     margin-bottom: 50px;
 }
 #final h2.insideBox{
