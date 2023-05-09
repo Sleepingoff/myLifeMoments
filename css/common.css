@@ -12,8 +12,9 @@ div.wrap{
     width: 100%;
 }
 .insideBox{
-    border: 1px solid #070707;
+    border: 1px solid black;
     margin-bottom: 20px;
+    background: white;
 }
 .border-50px{
     border-radius: 50px;

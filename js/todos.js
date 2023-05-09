@@ -2,6 +2,18 @@ const toDoList = document.querySelector("#todo-list");
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const clear = document.querySelector("#clear");
+
+
+//scroll 시에만 todolist가 나오게 하기
+//처음에 form 숨기기
+toDoForm.style.display = "none";
+
+document.addEventListener('scroll', function() {
+    //현재 스크롤 위치
+    let currentScrollValue = document.documentElement.scrollTop;
+    currentScrollValue < 10 ? toDoForm.style.display = "none" : toDoForm.style.display = "block";
+});
+
 //localStorage delete All
 function clearStorage(){
     localStorage.clear();

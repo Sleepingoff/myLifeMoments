@@ -5,6 +5,8 @@ $(document).ready(function(){
     $("div.boxwrap").prepend("<button class='prev'></button>");
     $("div.boxwrap").append("<button class='next'></button>");
     $("ul.wrap .box:first-child").addClass("currentBox");
+    $("ul.wrap .box:first-child").siblings().addClass("blurEffect");
+    $("ul.wrap .box:first-child").siblings().children().attr("disabled","disabled");
     //button click count
     let clickCount = 0;
     let currentIndex = 1;
@@ -24,8 +26,12 @@ $(document).ready(function(){
             if(currentIndex >= lastIndex) clickCount = firstIndex-1;
         }
         currentIndex = (-clickCount)+1;
+        let boxChild = $("ul.wrap li.box:nth-child("+currentIndex+")");
         $(movingBox).css({"transform" : "translateX("+ (clickCount * boxSize + middleDistance) +"px)"});
-        $("ul.wrap li.box:nth-child("+currentIndex+")").removeClass("blurEffect").addClass("currentBox");
-        $("ul.wrap li.box:nth-child("+currentIndex+")").siblings().removeClass("currentBox").addClass("blurEffect");
+        $(boxChild).removeClass("blurEffect").addClass("currentBox")
+        $(boxChild).children().removeAttr("disabled");
+        $(boxChild).siblings().removeClass("currentBox").addClass("blurEffect")
+        $(boxChild).siblings().children("button").attr("disabled", true);
+        $(boxChild).siblings().children("input").attr("disabled", true);
     });
 });

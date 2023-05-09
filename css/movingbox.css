@@ -25,6 +25,8 @@
 .box1{
     overflow: hidden;
     position: relative;
+    border-radius: 50%;
+    background-image: url(https://cdn.pixabay.com/photo/2023/04/27/10/22/cat-7954262_1280.jpg);
 }
 .box1 .onbox1{
     width: 100%;

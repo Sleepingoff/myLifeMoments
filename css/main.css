@@ -133,3 +133,8 @@
 #final{
     margin-bottom: 100px;
 }
+.liquidBox{
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 18%, rgba(0,40,125,1) 45%, rgba(0,255,183,1) 92%);
+    width: 100%;
+}
