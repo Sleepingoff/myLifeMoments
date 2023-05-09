@@ -31,6 +31,7 @@ $(document).ready(function(){
         $(boxChild).removeClass("blurEffect").addClass("currentBox")
         $(boxChild).children().removeAttr("disabled");
         $(boxChild).siblings().removeClass("currentBox").addClass("blurEffect")
+        //button, input등에 disabled 속성값 추가하기
         $(boxChild).siblings().children("button").attr("disabled", true);
         $(boxChild).siblings().children("input").attr("disabled", true);
     });

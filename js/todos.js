@@ -14,6 +14,7 @@ document.addEventListener('scroll', function() {
     let currentScrollValue = document.documentElement.scrollTop;
     currentScrollValue < 10 ? toDoForm.style.display = "none" : toDoForm.style.display = "block";
     (toDoForm.style.display = "block") ? toDoList.style.display = "block" : toDoList.style.display = "none";
+    //Otodo: 투두리스트 따로 볼 수 있는 버튼 등 추가하기
 });
 
 //localStorage delete All
