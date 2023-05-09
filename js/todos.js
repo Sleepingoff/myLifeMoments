@@ -7,11 +7,13 @@ const clear = document.querySelector("#clear");
 //scroll 시에만 todolist가 나오게 하기
 //처음에 form 숨기기
 toDoForm.style.display = "none";
+toDoList.style.display = "none";
 
 document.addEventListener('scroll', function() {
     //현재 스크롤 위치
     let currentScrollValue = document.documentElement.scrollTop;
     currentScrollValue < 10 ? toDoForm.style.display = "none" : toDoForm.style.display = "block";
+    (toDoForm.style.display = "block") ? toDoList.style.display = "block" : toDoList.style.display = "none";
 });
 
 //localStorage delete All
