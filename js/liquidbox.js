@@ -1,11 +1,11 @@
-$(function () {
-  // Vars
-  var pointsA = [],
+$(document).ready(function () {
+  // lets
+  let pointsA = [],
     pointsB = [],
-    $canvas = null,
-    canvas = null,
+    $canvas = [],
+    canvas = [],
     context = null,
-    vars = null,
+    lets = null,
     points = 8,
     viscosity = 20,
     mouseDist = 70,
@@ -61,10 +61,13 @@ $(function () {
    */
   function initButton() {
     // Get button
-    var div = $(".p18");
-    var divWidth = div.width();
-    var divHeight = div.height();
-
+    let div = $("div.p18");
+    //div.p18이 여러개여서 객체로 들어옴
+    console.log(typeof div);
+    console.dir(div);
+    //객체로 들어온 요소들 중 하나에만 적용
+    let divWidth = div.outerWidth();
+    let divHeight = div.outerHeight();
     // Create canvas
     $canvas = $("<canvas></canvas>");
     div.append($canvas);
@@ -76,14 +79,14 @@ $(function () {
 
     // Add points
 
-    var x = divHeight / 2;
-    for (var j = 1; j < points; j++) {
+    let x = divHeight / 2;
+    for (let j = 1; j < points; j++) {
       addPoints(x + ((divWidth - divHeight) / points) * j, 0);
     }
     addPoints(divWidth - divHeight / 5, 0);
     addPoints(divWidth + divHeight / 10, divHeight / 2);
     addPoints(divWidth - divHeight / 5, divHeight);
-    for (var j = points - 1; j > 0; j--) {
+    for (let j = points - 1; j > 0; j--) {
       addPoints(x + ((divWidth - divHeight) / points) * j, divHeight);
     }
     addPoints(divHeight / 5, divHeight);
@@ -127,9 +130,9 @@ $(function () {
     this.vx += (this.ix - this.x) / (viscosity * this.level);
     this.vy += (this.iy - this.y) / (viscosity * this.level);
 
-    var dx = this.ix - relMouseX,
+    let dx = this.ix - relMouseX,
       dy = this.iy - relMouseY;
-    var relDist = 1 - Math.sqrt(dx * dx + dy * dy) / mouseDist;
+    let relDist = 1 - Math.sqrt(dx * dx + dy * dy) / mouseDist;
 
     // Move x
     if (
@@ -169,21 +172,21 @@ $(function () {
     context.fillRect(0, 0, $canvas.width(), $canvas.height());
 
     // Move points
-    for (var i = 0; i <= pointsA.length - 1; i++) {
+    for (let i = 0; i <= pointsA.length - 1; i++) {
       pointsA[i].move();
       pointsB[i].move();
     }
 
     // Create dynamic gradient
-    var gradientX = Math.min(
+    let gradientX = Math.min(
       Math.max(mouseX - $canvas.offset().left, 0),
       $canvas.width()
     );
-    var gradientY = Math.min(
+    let gradientY = Math.min(
       Math.max(mouseY - $canvas.offset().top, 0),
       $canvas.height()
     );
-    var distance =
+    let distance =
       Math.sqrt(
         Math.pow(gradientX - $canvas.width() / 2, 2) +
           Math.pow(gradientY - $canvas.height() / 2, 2)
@@ -192,7 +195,7 @@ $(function () {
         Math.pow($canvas.width() / 2, 2) + Math.pow($canvas.height() / 2, 2)
       );
 
-    var gradient = context.createRadialGradient(
+    let gradient = context.createRadialGradient(
       gradientX,
       gradientY,
       300 + 300 * distance,
@@ -204,10 +207,10 @@ $(function () {
     gradient.addColorStop(1, "#E406D6");
 
     // Draw shapes
-    var groups = [pointsA, pointsB];
+    let groups = [pointsA, pointsB];
 
-    for (var j = 0; j <= 1; j++) {
-      var points = groups[j];
+    for (let j = 0; j <= 1; j++) {
+      let points = groups[j];
 
       if (j == 0) {
         // Background style
@@ -220,10 +223,10 @@ $(function () {
       context.beginPath();
       context.moveTo(points[0].x, points[0].y);
 
-      for (var i = 0; i < points.length; i++) {
-        var p = points[i];
-        var nextP = points[i + 1];
-        var val = 30 * 0.552284749831;
+      for (let i = 0; i < points.length; i++) {
+        let p = points[i];
+        let nextP = points[i + 1];
+        let val = 30 * 0.552284749831;
 
         if (nextP != undefined) {
           if (nextP.ix > p.ix && nextP.iy < p.iy) {
@@ -275,8 +278,8 @@ $(function () {
       // Draw points
       context.fillStyle = "#000";
       context.beginPath();
-      for (var i = 0; i < pointsA.length; i++) {
-        var p = pointsA[i];
+      for (let i = 0; i < pointsA.length; i++) {
+        let p = pointsA[i];
 
         context.rect(p.x - 1, p.y - 1, 2, 2);
       }
@@ -285,8 +288,8 @@ $(function () {
       // Draw controls
       context.fillStyle = "#f00";
       context.beginPath();
-      for (var i = 0; i < pointsA.length; i++) {
-        var p = pointsA[i];
+      for (let i = 0; i < pointsA.length; i++) {
+        let p = pointsA[i];
 
         context.rect(p.cx1 - 1, p.cy1 - 1, 2, 2);
         context.rect(p.cx2 - 1, p.cy2 - 1, 2, 2);

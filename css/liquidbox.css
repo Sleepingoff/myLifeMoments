@@ -45,6 +45,9 @@ div.p18::after {
     top: -20%;
     right: -30%;
 } */
+div.p18{
+    position: relative;
+}
 div.p18 canvas {
     position: absolute;
     top: -50px;
