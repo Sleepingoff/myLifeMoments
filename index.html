@@ -79,6 +79,19 @@
     </main>
     <footer w3-include-html="component/footer.html" class="flex"></footer>
     <script>
+      const todolist = document.querySelector("#todo-form input");
+      todolist.addEventListener("submit", getSound())
+      function getSound(){
+        fetch(`http://localhost:3000/sound/${todolist.value}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            document.querySelector("#greeting").innerText = data;
+          });
+
+      }
+    </script>
+    <script>
       includeHTML();
     </script>
   </body>
