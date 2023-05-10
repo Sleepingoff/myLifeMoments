@@ -1,34 +1,55 @@
-:root{
+:root {
     --main-color: black;
     --blue-color: rgb(0, 97, 139);
 }
-aside{
-    position: relative;
+
+html {
+    scroll-behavior: smooth;
 }
-#todo{
+
+aside {
+    position: relative;
+    height: 300px;
+}
+
+#info {
+    background-color: white;
+    height: 100%;
+    border-right: 1px solid var(--blue-color);
+    padding-top: 20px;
+}
+
+#todo {
     border: 1px solid var(--blue-color);
     border-radius: 10px;
     padding: 10px;
     position: absolute;
-    top: 0; right: -20px;
+    top: 20px;
+    right: -50px;
+    z-index: -1;
+    background: white;
+    width: 300px;
 }
-#todo::after{
+
+#todo::after {
     content: "open";
     position: absolute;
     top: 20px;
     right: 10px;
 }
-#todo-form{
+
+#todo-form {
     justify-content: center;
-    
-}
-#todo-form input{
 
 }
-#todo-list{
+
+#todo-form input {}
+
+#todo-list {
     margin-top: 20px;
 }
-#todo-list li{
+
+#todo-list li {
     margin-top: 10px;
     padding: 10px 0;
     display: flex;
@@ -36,7 +57,8 @@ aside{
     border-bottom: 1px solid #ccc;
     gap: 30px;
 }
-#todo-list li button{
+
+#todo-list li button {
     border: 1px solid var(--main-color);
     background-color: transparent;
 }

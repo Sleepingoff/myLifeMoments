@@ -6,14 +6,20 @@ const clear = document.querySelector("#clear");
 
 
 //scroll 시에만 todolist가 나오게 하기
-//처음에 모두 숨기기
-toDo.style.display = "none";
+//처음에 모두 숨기기 -> 숨기지 않고 오른쪽으로 나오게 하기
+let toDoMove = toDo.offsetLeft;
+let toDoZ = toDo.style.zIndex;
+console.dir(toDo);
 
 document.addEventListener('scroll', function() {
     //현재 스크롤 위치
     let currentScrollValue = document.documentElement.scrollTop;
-    currentScrollValue < 10 ? toDo.style.display = "none" : toDo.style.display = "block";
-
+    //스크롤이 10 이하면 원래 위치 아니면 다른 위치
+    currentScrollValue < 10 ? toDoMove = -50 : toDoMove = -100;
+    toDoMove == -100 ? toDoZ = 9 : toDoZ = -1;
+    //각각에 적용하기
+    toDo.style.right = toDoMove + "px";
+    toDo.style.zIndex = toDoZ;
 });
 //localStorage delete All
 function clearStorage(){
