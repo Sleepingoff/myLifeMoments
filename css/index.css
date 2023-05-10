@@ -3,6 +3,6 @@ aside.flex{
     justify-content: center;
     align-items: center;
 }
-section > .wrap{
+aside.wrap{
     width: calc(100% / 3 - 10px);
 }

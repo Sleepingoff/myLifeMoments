@@ -7,7 +7,7 @@ const div = document.querySelectorAll("div.p18");
 arr.forEach((value, key) => {
   console.log(`${value} : ${key}`);
 });*/
-
-let divWidth =div.forEach((elem) => elem.offsetWidth);
-let divHeight =div.forEach((elem) => elem.offsetHeight);
-console.log(divHeight);
+console.dir(div);
+let divWidth =div.offsetWidth;
+let divHeight =div.offsetHeight;
+console.log(divWidth);
