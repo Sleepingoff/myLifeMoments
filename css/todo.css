@@ -1,9 +1,23 @@
+:root{
+    --main-color: black;
+}
 #todo-form{
     justify-content: center;
 }
-#todo-input{
+#todo-form input{
 
 }
-#todo-btn{
-
+#todo-list{
+    margin-top: 20px;
+}
+#todo-list li{
+    margin-top: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+#todo-list li button{
+    border: 1px solid var(--main-color);
+    background-color: transparent;
 }
