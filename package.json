@@ -1,0 +1,11 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "- 첫번째 블로그&포트폴리오",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
