@@ -1,8 +1,25 @@
 :root{
     --main-color: black;
+    --blue-color: rgb(0, 97, 139);
+}
+aside{
+    position: relative;
+}
+#todo{
+    border: 1px solid var(--blue-color);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+}
+#todo::after{
+    content: "open";
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
 #todo-form{
     justify-content: center;
+    
 }
 #todo-form input{
 
