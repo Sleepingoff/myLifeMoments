@@ -4,28 +4,52 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const clear = document.querySelector("#clear");
 
+//초기화하기
+function init(){
+    toDoMove = toDo.offsetLeft;
+    toDoZ = toDo.style.zIndex;
+}
 
 //scroll 시에만 todolist가 나오게 하기
 //처음에 모두 숨기기 -> 숨기지 않고 오른쪽으로 나오게 하기
-let toDoMove = toDo.offsetLeft;
+let toDoMove = toDo.style.right;
 let toDoZ = toDo.style.zIndex;
 let start = 0, end = 0;
+let animate;
 console.dir(toDo);
-
+//오른쪽으로 움직이기
+function moveRight(elem){
+    elem.style.right = parseInt(elem.style.right) + 10 + "px";
+    animate = setInterval(moveRight, 20);
+}
+//왼쪽으로 움직이기
+function moveLeft(elem){
+    elem.style.left = parseInt(elem.style.left) + 10 + "px";
+    animate = setInterval(moveLeft, 20);
+}
+//멈추기
+function stop(){
+    clearInterval(animate);
+}
+//스크롤 시작하는 위치
+let startScrollValue = document.documentElement.scrollTop;
 document.addEventListener('scroll', function() {
-    start = toDoMove;
     //현재 스크롤 위치
     let currentScrollValue = document.documentElement.scrollTop;
-    //스크롤이 10 이하면 원래 위치 아니면 다른 위치
-    currentScrollValue < 10 ? end = -50 : end = -100;
-    end == -100 ? toDoZ = 1 : toDoZ = -1;
-    //O: moving smooth when todolist move
-    // const gap = end - start;
-    // for(let i = 0; i <= gap; i++){
-    //     toDo.style.right = start+i + "px";
-    // }
+    let scrollValue = startScrollValue - currentScrollValue;
+    //스크롤을 내릴 경우 - 투두리스트 show
+    if(scrollValue < 0){
+        toDo.style.right = (parseInt(toDo.style.right) - scrollValue) + "px";
+        toDo.style.zIndex = 1;
+        startScrollValue = currentScrollValue;
+    }
+    //스크롤을 올릴 경우 - 투두리스트 hide
+    if(scrollValue > 0){
+        toDo.style.left = (parseInt(toDo.style.left) + scrollValue) + "px";
+        toDo.style.zIndex = -1;
+        startScrollValue = currentScrollValue;
+    }
     //각각에 적용하기
-    toDo.style.zIndex = toDoZ;
 });
 
 
@@ -37,7 +61,7 @@ clear.addEventListener("click", clearStorage);
 //saving todo
 let toDos = [];
 let toDoObj = {};
-const  DOTO_KEY = "toDos";
+const  DOTO_KEY = "toDos"; 
 function saveToDos(){
     //Array -> string
     localStorage.setItem(DOTO_KEY, JSON.stringify(toDos));
