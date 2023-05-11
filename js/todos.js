@@ -39,13 +39,13 @@ document.addEventListener('scroll', function() {
     let scrollValue = startScrollValue - currentScrollValue;
     //스크롤을 내릴 경우 - 투두리스트 show
     if(scrollValue < 0){
-        toDo.style.right = (parseInt(toDo.style.right) - scrollValue) + "px";
+        toDo.style.right = parseInt(toDo.style.right) + 10 + "px";
         toDo.style.zIndex = 1;
         startScrollValue = currentScrollValue;
     }
     //스크롤을 올릴 경우 - 투두리스트 hide
     if(scrollValue > 0){
-        toDo.style.left = (parseInt(toDo.style.left) + scrollValue) + "px";
+        toDo.style.left = parseInt(toDo.style.left) + 10 + "px";
         toDo.style.zIndex = -1;
         startScrollValue = currentScrollValue;
     }
