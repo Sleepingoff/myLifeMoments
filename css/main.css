@@ -1,3 +1,4 @@
+/* for jump link */
 @media screen and (min-height: 60px){
     section{
         scroll-margin-top: 80px;
@@ -13,8 +14,8 @@
     width: 950px;
 }
 #home div.p14{
-    margin-left: 200px;
-    align-self: flex-start;
+    margin-right: 360px;
+    align-self: center;
 }
 #home div.p18{
     padding: 36px 30px;
