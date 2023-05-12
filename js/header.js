@@ -1,9 +1,9 @@
 const header = document.querySelector("header");
-console.log(header);
 const headerUp = "up";
 const headerDown = "down";
 
 let startScrollValue = document.documentElement.scrollTop;
+let animate;
 function upHeader(){
     header.classList.remove(headerDown);
     header.classList.add(headerUp);
@@ -11,24 +11,22 @@ function upHeader(){
 function downHeader(){
     header.classList.remove(headerUp);
     header.classList.add(headerDown);
+    timeUp();
 }
 function removeAll(){
     header.classList.remove(headerUp);
     header.classList.remove(headerDown);
+    clearTimeout(animate);
+}
+function timeUp(){
+    animate = setTimeout(upHeader,3000);
 }
 function scrollHeader() {
+    removeAll();
     let currentScrollValue = document.documentElement.scrollTop;
     let scrollValue = startScrollValue - currentScrollValue;
-    /*if (scrollValue > 0) {
-        upHeader();
-    }
-    if (scrollValue < 0) {
-        downHeader();
-    }
-    if (currentScrollValue === 0){
-        removeAll();
-    }*/
-    currentScrollValue === 0 ? removeAll() : (scrollValue < 0 ? downHeader() : upHeader());
+    scrollValue < 0 ? downHeader() : upHeader();
+    if(currentScrollValue === 0) removeAll();
     startScrollValue = currentScrollValue;
 }
 document.addEventListener("scroll", scrollHeader);
