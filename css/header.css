@@ -7,15 +7,14 @@ header{
     justify-content: center;
     position: fixed;
     top: 0;
+    box-shadow: 2px 2px 5px transparent;
+    transition: all 0.5s;
 }
 .down{
     box-shadow: 2px 2px 5px hsl(0, 0%, 80%);
 }
 .up{
-    transform: translateX(-60px);
-}
-.up:hover{
-    transform: translateX(60px);
+    transform: translateY(-50px);
 }
 header div.wrap{
     width: 1100px;
