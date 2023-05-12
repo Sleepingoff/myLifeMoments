@@ -43,7 +43,7 @@ header.addEventListener("mouseleave", scrollHeader);
 
 const p14 = document.querySelectorAll(".p14");
 
-function fadeUp(){
+/*function fadeUp(){
     let currentScrollValue = document.documentElement.scrollTop;
     console.log(currentScrollValue);
     if(currentScrollValue >= 100){
@@ -64,5 +64,17 @@ function fadeUp(){
     if(currentScrollValue >= 2990){
         p14[5].classList.add("fadeUp");
     }
-}
-document.addEventListener("scroll", fadeUp);
+}*/
+let observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		if(entry.intersectionRatio > 0){
+		//뷰포트에 대상이 들어왔다면
+			entry.target.classList.add('fadeUp');
+		}
+		else{
+			entry.target.classList('fadeUp');
+		}
+	});
+});
+
+p14.forEach(elem => observer.observe(elem));
