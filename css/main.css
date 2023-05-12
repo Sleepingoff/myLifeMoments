@@ -1,3 +1,8 @@
+@media screen and (min-height: 60px){
+    section{
+        scroll-margin-top: 80px;
+    }
+}
 #home div.flex{
     flex-direction: column;
     justify-content: center;
@@ -39,15 +44,13 @@
 #about div.p14{
     margin-bottom: 50px;
 }
-#about div.textright{
-    margin: 80px 0;
-}
 #about div.p14:nth-of-type(2){
     align-self: flex-start;
     margin-left: 130px;
 }
 #about div.p14:nth-of-type(3){
     align-self: flex-end;
+    margin: 80px 0;
 }
 #about div.p14:nth-of-type(4){
     /* align-self: flex-start; */
@@ -141,7 +144,8 @@
 .p14{
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.5s;
+    transition: all 1s;
+    transition-delay: 2000;
 }
 .fadeUp{
     opacity: 1;
