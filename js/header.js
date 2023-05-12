@@ -40,3 +40,29 @@ header.addEventListener("mouseenter", function () {
   clearTimeout(animate);
 });
 header.addEventListener("mouseleave", scrollHeader);
+
+const p14 = document.querySelectorAll(".p14");
+
+function fadeUp(){
+    let currentScrollValue = document.documentElement.scrollTop;
+    console.log(currentScrollValue);
+    if(currentScrollValue >= 100){
+        p14[0].classList.add("fadeUp");
+    }
+    if(currentScrollValue >= 600){
+        p14[1].classList.add("fadeUp");
+    }
+    if(currentScrollValue >= 700){
+        p14[2].classList.add("fadeUp");
+    }
+    if(currentScrollValue >= 750){
+        p14[3].classList.add("fadeUp");
+    }
+    if(currentScrollValue >= 1550){
+        p14[4].classList.add("fadeUp");
+    }
+    if(currentScrollValue >= 2990){
+        p14[5].classList.add("fadeUp");
+    }
+}
+document.addEventListener("scroll", fadeUp);

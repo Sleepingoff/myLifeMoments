@@ -138,3 +138,12 @@
     background: linear-gradient(45deg, rgba(2,0,36,1) 18%, rgba(0,40,125,1) 45%, rgba(0,255,183,1) 92%);
     width: 100%;
 }
+.p14{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s;
+}
+.fadeUp{
+    opacity: 1;
+    transform: translateY(0);
+}
