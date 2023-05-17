@@ -1,5 +1,3 @@
-$(document).ready(function () {
-  // lets
   let pointsA = [],
     pointsB = [],
     $canvas = [],
@@ -300,4 +298,3 @@ $(document).ready(function () {
 
   // Init
   initButton();
-});

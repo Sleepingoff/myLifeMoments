@@ -2,8 +2,8 @@ const header = document.querySelector("header");
 const headerUp = "up";
 const headerDown = "down";
 
-let startScrollValue = document.documentElement.scrollTop;
-let animate;
+let startScroll = document.documentElement.scrollTop;
+let animation;
 function upHeader() {
   header.classList.remove(headerDown);
   header.classList.add(headerUp);
@@ -15,15 +15,15 @@ function downHeader() {
 function removeAll() {
   header.classList.remove(headerUp);
   header.classList.remove(headerDown);
-  clearTimeout(animate);
+  clearTimeout(animation);
 }
 function timeUp() {
-  animate = setTimeout(upHeader, 3000);
+  animation = setTimeout(upHeader, 3000);
 }
 function scrollHeader() {
   removeAll();
   let currentScrollValue = document.documentElement.scrollTop;
-  let scrollValue = startScrollValue - currentScrollValue;
+  let scrollValue = startScroll - currentScrollValue;
   if (scrollValue < 0) {
     downHeader();
     timeUp();
@@ -31,12 +31,12 @@ function scrollHeader() {
     upHeader();
   }
   if (currentScrollValue === 0) removeAll();
-  startScrollValue = currentScrollValue;
+  startScroll = currentScrollValue;
 }
 document.addEventListener("scroll", scrollHeader);
 
 header.addEventListener("mouseenter", function () {
   downHeader();
-  clearTimeout(animate);
+  clearTimeout(animation);
 });
 header.addEventListener("mouseleave", scrollHeader);
