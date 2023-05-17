@@ -54,3 +54,12 @@ header .h1{
     margin: 0 0.5em;
     text-align: center;
 }
+#login{
+    cursor: pointer;
+}
+.popup{
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+}

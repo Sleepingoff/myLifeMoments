@@ -40,4 +40,3 @@ header.addEventListener("mouseenter", function () {
   clearTimeout(animate);
 });
 header.addEventListener("mouseleave", scrollHeader);
-
