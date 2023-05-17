@@ -1,9 +1,16 @@
 window.onload = () => {
+  const modal = document.querySelector("#modal");
   const login = document.getElementById("login");
-  const loginmodal = document.querySelector("header #loginmodal");
+  const loginbtn = document.querySelector("button.close");
+  const loginmodal = document.querySelector("#loginmodal");
 
   login.addEventListener("click", function () {
+    modal.classList.remove("hide");
     loginmodal.classList.add("popup");
-    loginmodal.classList.remove("hide");
+
+    loginbtn.addEventListener("click", function(){
+      modal.classList.add("hide");
+      loginmodal.classList.remove("popup");
+    })
   });
 };

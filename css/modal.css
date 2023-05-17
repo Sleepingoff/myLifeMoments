@@ -1,0 +1,39 @@
+#login{
+    cursor: pointer;
+}
+#loginmodal{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#loginmodal .close{
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+}
+#loginmodal input{
+    align-self: flex-end;
+}
+#loginmodal input:focus{
+    background-color: #EE9999;
+}
+.popup{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: calc(50% - 700px / 2);
+    left: calc(50% - 700px / 2);
+    width: 700px;
+    height: 700px;
+    border-radius: 10px;
+}
+
+#loginmodal .p18{
+    width: 440px;
+    padding: 30px;
+}
