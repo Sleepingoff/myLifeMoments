@@ -4,7 +4,7 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const clear = document.querySelector("#clear");
 
-//초기화하기
+/*//초기화하기
 function init(){
     toDoMove = toDo.offsetLeft;
     toDoZ = toDo.style.zIndex;
@@ -57,7 +57,7 @@ document.addEventListener('scroll', function() {
 function clearStorage(){
     localStorage.clear();
 }
-clear.addEventListener("click", clearStorage);
+clear.addEventListener("click", clearStorage);*/
 //saving todo
 let toDos = [];
 let toDoObj = {};

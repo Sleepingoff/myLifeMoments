@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head w3-include-html="component/link.html">
+    <script type="text/javascript" src="js/includehtml.js"></script>
+    <title>O-gg</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="wrap flex">
+        <div id="logo" class="flex">
+          <figure>
+            <figcaption class="hide">logo</figcaption>
+            <img src="../img/egg.svg" alt="#" />
+          </figure>
+          <a href="main.html" class="block"><h1 class="h2">Oeggs!</h1></a>
+        </div>
+        <ul class="profile flex">
+          <li class="tooltips">
+            알람
+            <div class="tooltipDown">
+              <span class="textcenter">All news for you</span>
+              <ul class="tooltipIndex">
+                <li><a href="">group news</a></li>
+                <li><a href="">그룹에 가입하기</a></li>
+                <li><a href="">다른 그룹 구경하기</a></li>
+                <li><a href="">네번째 소식</a></li>
+                <li><a href="">다섯번째 소식</a></li>
+              </ul>
+            </div>
+          </li>
+          <li id="login">로그인/회원가입</li>
+          <li class="hide">사진</li>
+        </ul>
+      </div>
+    </header>
+    <main id="personal">
+        <!-- personal profile -->
+        <section id="pro">
+            <div class="insideBox border-10px">
+                <a href="" class="block"></a>
+                <a href="" class="block"></a>
+            </div>
+        </section>
+        <!-- todolist -->
+        <section id="inbox">
+            <div class="insideBox border-10px">
+              <form action="" id="todo-form"  class="flex">
+                <input type="text" name="" class="block" placeholder="write what to do">
+              </form>
+              <ul id="todo-list"></ul>
+            </div>
+        </section>
+        <!-- main page -->
+        <section id="page">
+            <div class="insideBox border-10px">
+                
+            </div>
+        </section>
+    </main>
+    <footer w3-include-html="component/footer.html" class="flex"></footer>
+    <script>
+      includeHTML();
+    </script>
+    <script src="js/header.js"></script>
+    <script src="js/todos.js"></script>
+  </body>
+</html>

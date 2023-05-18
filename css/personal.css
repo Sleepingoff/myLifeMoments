@@ -1,0 +1,30 @@
+#personal{
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-rows: 350px 450px;
+    grid-template-areas: 
+    "pro page"
+    "inbox page";
+    gap: 20px;
+    margin-bottom: 100px;
+}
+#pro{
+    grid-area: pro;
+    width: 350px;
+    height: 350px;
+}
+#inbox{
+    grid-area: inbox;
+    width: 350px;
+    height: 450px;
+}
+#page{
+    grid-area: page;
+    height: 820px;
+}
+#pro div.insideBox,
+#inbox div.insideBox,
+#page div.insideBox{
+    width: 100%;
+    height: 100%;
+}

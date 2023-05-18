@@ -22,6 +22,9 @@
 #loginmodal input:focus{
     background-color: #EE9999;
 }
+#loginmodal button.login:active{
+    background-color: #EE9999;
+}
 .popup{
     display: block;
     position: fixed;
