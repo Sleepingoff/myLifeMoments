@@ -1,4 +1,4 @@
-const p14 = document.querySelectorAll(".p14");
+const fade = document.querySelectorAll(".fade");
 
 /*function fadeUp(){
     let currentScrollValue = document.documentElement.scrollTop;
@@ -37,7 +37,7 @@ let observer = new IntersectionObserver(entries => {
 	});
 }, options);
 
-p14.forEach(elem => observer.observe(elem));
+fade.forEach(elem => observer.observe(elem));
 
 const p18 = document.querySelectorAll(".p18");
 const h2 = document.querySelectorAll("h2.insideBox");
