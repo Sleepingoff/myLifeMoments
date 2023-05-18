@@ -24,7 +24,7 @@
     align-items: stretch;
 }
 #inbox #todo-list{
-    height: calc(100% - 50px - 10px);
+    height: calc(100% - 150px);
     overflow: scroll;
     overflow-x: hidden;
 }
