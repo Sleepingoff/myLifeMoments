@@ -9,8 +9,8 @@ app.use("/js", express.static(__dirname + "/js"));
 app.get("/", (_, res) => res.render("main"));
 app.get("/*", (_, res) => res.redirect("/"));
 
-const handleListen = () => console.log(`listening on http://localhost:5000`);
+const handleListen = () => console.log(`listening on http://localhost:3000`);
 
 const httpServer = http.createServer(app);
 
-httpServer.listen(5000, handleListen);
+httpServer.listen(3000, handleListen);
