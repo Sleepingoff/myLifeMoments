@@ -7,3 +7,14 @@ prevBtn.classList.add("prev");
 nextBtn.classList.add("next");
 carouselBox.prepend(prevBtn);
 carouselBox.append(nextBtn);
+const size = carouselElem.clientWidth;
+let counter = 1;
+
+prevBtn.addEventListener("click", ()=>{
+    carousel.style.transform = "translateX(" + -size * counter + "px)";
+    counter++;
+})
+nextBtn.addEventListener("click", ()=>{
+    carousel.style.transform = "translateX(" + size * counter + "px)";
+    counter++;
+})

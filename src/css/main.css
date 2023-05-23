@@ -73,6 +73,7 @@ div.carousel button{
     background-color: white;
 }
 #about div.wrap div.carousel button.prev{
+    z-index: 1;
     position: absolute;
     left: 0;
 }
