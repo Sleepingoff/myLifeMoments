@@ -1,20 +1,26 @@
 const carouselBox = document.querySelector(".carousel");
 const carousel = carouselBox.querySelector("ul");
-const carouselElem = carousel.querySelector("li");
+const carouselElem = carousel.querySelectorAll("li");
 const prevBtn = document.createElement("button");
 const nextBtn = document.createElement("button");
 prevBtn.classList.add("prev");
 nextBtn.classList.add("next");
 carouselBox.prepend(prevBtn);
 carouselBox.append(nextBtn);
-const size = carouselElem.clientWidth;
-let counter = 1;
+const size = carouselElem[0].clientWidth;
 
-prevBtn.addEventListener("click", ()=>{
-    carousel.style.transform = "translateX(" + -size * counter + "px)";
-    counter++;
-})
-nextBtn.addEventListener("click", ()=>{
-    carousel.style.transform = "translateX(" + size * counter + "px)";
-    counter++;
-})
+let count = 0;
+
+prevBtn.addEventListener("click", () => {
+  if (count >= carouselElem.length - 1) count = 0;
+  if (count === 0) return;
+  count++;
+  carousel.style.transform = "translateX(" + size * count + "px)";
+  console.log(count);
+});
+nextBtn.addEventListener("click", () => {
+  if (count <= -carouselElem.length + 3) count = 1;
+  count--;
+  carousel.style.transform = "translateX(" + size * count + "px)";
+  console.log(count);
+});

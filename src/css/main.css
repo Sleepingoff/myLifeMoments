@@ -91,6 +91,7 @@ div.carousel button{
     align-items: center;
     gap: 20px;
     padding-left: 40px;
+    transition: all 0.3s;
 }
 #about div.carousel ul li{
     width: 300px;
