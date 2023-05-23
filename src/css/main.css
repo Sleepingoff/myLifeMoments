@@ -62,23 +62,21 @@
     overflow: hidden;
     position: relative;
 }
-#about div.wrap div.carousel::before{
-    content: "";
+div.carousel button{
     display: block;
     width: 40px;
     height: 300px;
+    border: none;
     background: url(../img/prev.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
+}
+#about div.wrap div.carousel button.prev{
     position: absolute;
     left: 0;
 }
-#about div.wrap div.carousel::after{
-    content: "";
-    display: block;
-    width: 40px;
-    height: 300px;
+#about div.wrap div.carousel button.next{
     background: url(../img/next.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -109,6 +107,7 @@
     width: 440px;
 }
 #record div.p18:nth-of-type(1){
+    margin-top: 60px;
 
 }
 #record div.p18:nth-of-type(3){
