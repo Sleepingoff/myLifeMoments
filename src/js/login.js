@@ -16,7 +16,7 @@ window.onload = () => {
   const button = document.querySelector("#loginmodal button.login");
 
   button.addEventListener("click", function () {
-    location.href = "../personal.html";
+    document.location.href = "personal.html";
   });
 
 };

@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head w3-include-html="component/link.html">
-    <script type="text/javascript" src="js/includehtml.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/movingbox.css" />
+    <link rel="stylesheet" href="../css/tooltips.css" />
+    <!-- 900px mediaquery -->
+    <link rel="stylesheet" href="../css/media900.css" />
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.4.js"
+    ></script>
     <title>O-gg</title>
   </head>
   <body>
-    <header w3-include-html="component/header.html"></header>
-    <div id="modal" class="hide" w3-include-html="component/modal.html"></div>
+    <header>
+      <div class="wrap flex ha">
+        <div id="logo" class="flex">
+          <figure>
+            <figcaption class="hide">logo</figcaption>
+            <img src="../img/egg.svg" alt="#" />
+          </figure>
+          <a href="main.html" class="block"><h1 class="h2">Oeggs!</h1></a>
+        </div>
+        <ul class="gnb flex bold textcenter p18">
+          <li>
+            <a href="#home" class="block"> Home </a>
+          </li>
+          <li>
+            <a href="#about" class="block"> About </a>
+          </li>
+          <li>
+            <a href="#record" class="block"> How to use </a>
+          </li>
+        </ul>
+        <ul class="profile flex">
+          <li class="tooltips">
+            알람
+            <div class="tooltipDown">
+              <span class="textcenter">All news for you</span>
+              <ul class="tooltipIndex">
+                <li><a href="">group news</a></li>
+                <li><a href="">그룹에 가입하기</a></li>
+                <li><a href="">다른 그룹 구경하기</a></li>
+                <li><a href="">네번째 소식</a></li>
+                <li><a href="">다섯번째 소식</a></li>
+              </ul>
+            </div>
+          </li>
+          <li id="login">로그인/회원가입</li>
+          <li class="hide">사진</li>
+        </ul>
+      </div>
+    </header>
+    <div id="modal" class="hide">
+      <div id="loginmodal" class="insideBox">
+        <button class="close"></button>
+        <div class="insideBox p18 border-50px">
+            <p>dO yOu wanna help me?<span class="block"></span>lOg-in and create yOur Own page!</p>
+        </div>
+        <input type="text" class="block p18 border-50px insideBox" placeholder="write your ID">
+        <input type="password" class="block p18 border-50px insideBox" placeholder="write your passwords">
+        <button type="button" class="login block p18 border-50px insideBox">l O n - i n ! ! !</button>
+        <a href="#">
+            <div class="insideBox p18 border-50px">
+                <p>O! yOu dOn't sign up? gO right nOw! >>></p>
+            </div>
+        </a>
+      </div>
+    </div>
+    </div>
     <main class="head">
       <section id="home" class="ha">
         <div class="flex ha">
@@ -39,7 +116,7 @@
         <div class="wrap ha flex">
           <div class="p18 insideBox border-50px textcenter">
             <p>O it's nOt mine! yOu get it! just click me</p>
-            <img id="smallegg" src="img/egg.svg" alt="egg" />
+            <img id="smallegg" src="../img/egg.svg" alt="egg" />
           </div>
           <div class="p14 fade">
             <p>먼저, 자신만의 페이지, 비어있는 공간을 만들어 주세요!</p>
@@ -91,7 +168,7 @@
               무언가를 위해
             </p>
           </div>
-          <img src="img/bigegg.svg" alt="bigegg" id="bigegg" />
+          <img src="../img/bigegg.svg" alt="bigegg" id="bigegg" />
           <div class="p18 insideBox border-50px">
             <p>
               what?<span class="block"></span> i never ever give it tO this!
@@ -121,13 +198,15 @@
         </div>
       </section>
     </main>
-    <footer w3-include-html="component/footer.html" class="flex"></footer>
-    <script>
-      includeHTML();
-    </script>
+    <footer w3-include-html="component/footer.html" class="flex">
+      <p class="bold">Contact me</p>
+      <address>
+        <span class="block">email: just_jh30@naver.com</span>
+      </address>
+      <p>문의하기</p>
+    </footer>
     <script src="../js/header.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/login.js"></script>
-    <!-- <script src="js/modal.js"></script> -->
   </body>
 </html>

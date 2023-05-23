@@ -1,27 +1,4 @@
 const fade = document.querySelectorAll(".fade");
-
-/*function fadeUp(){
-    let currentScrollValue = document.documentElement.scrollTop;
-    console.log(currentScrollValue);
-    if(currentScrollValue >= 100){
-        p14[0].classList.add("fadeUp");
-    }
-    if(currentScrollValue >= 600){
-        p14[1].classList.add("fadeUp");
-    }
-    if(currentScrollValue >= 700){
-        p14[2].classList.add("fadeUp");
-    }
-    if(currentScrollValue >= 750){
-        p14[3].classList.add("fadeUp");
-    }
-    if(currentScrollValue >= 1550){
-        p14[4].classList.add("fadeUp");
-    }
-    if(currentScrollValue >= 2990){
-        p14[5].classList.add("fadeUp");
-    }
-}*/
 let options = {
   threshold: 1.0
 }
@@ -39,7 +16,7 @@ let observer = new IntersectionObserver(entries => {
 
 fade.forEach(elem => observer.observe(elem));
 
-const p18 = document.querySelectorAll(".p18");
+const p18 = document.querySelectorAll("main .p18");
 const h2 = document.querySelectorAll("h2.insideBox");
 // mouseenter시 random color
 

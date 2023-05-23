@@ -3,7 +3,8 @@ import express from "express";
 
 const app = express();
 
-app.set("view engine", "html");
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 app.set("views", __dirname + "/views");
 app.use("/js", express.static(__dirname + "/js"));
 app.get("/", (_, res) => res.render("main"));
