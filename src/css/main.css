@@ -125,16 +125,20 @@ div.carousel button{
 #record div.p14{
     margin-left: 30px;
 }
+#final div.flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #final div.insideBox{
     width: 150px;
     height: 60px;
-    margin-left: 400px;
     margin-bottom: 30px;
 }
 #final div.insideBox:nth-of-type(2){
     width: 220px;
     height: 80px;
-    margin-left: 500px;
+    margin-left: 100px;
     margin-bottom: 50px;
 }
 #final h2.insideBox{

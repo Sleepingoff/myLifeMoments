@@ -16,11 +16,9 @@ prevBtn.addEventListener("click", () => {
   if (count === 0) return;
   count++;
   carousel.style.transform = "translateX(" + size * count + "px)";
-  console.log(count);
 });
 nextBtn.addEventListener("click", () => {
   if (count <= -carouselElem.length + 3) count = 1;
   count--;
   carousel.style.transform = "translateX(" + size * count + "px)";
-  console.log(count);
 });
