@@ -22,6 +22,10 @@
     padding: 30px;
 }
 
+#modal button:active {
+    background-color: #EE9999;
+}
+
 #login {
     cursor: pointer;
 }
@@ -29,10 +33,6 @@
 #loginmodal {
     flex-direction: column;
     padding: 20px;
-}
-
-#loginmodal button.login:active {
-    background-color: #EE9999;
 }
 
 #signmodal {
@@ -43,9 +43,9 @@
     display: flex;
     position: fixed;
     z-index: 19;
-    top: calc(50% - 700px / 2);
-    left: calc(50% - 700px / 2);
-    width: 700px;
-    height: 700px;
+    top: calc(50% - 600px / 2);
+    left: calc(50% - 600px / 2);
+    width: 600px;
+    height: 600px;
     border-radius: 10px;
 }
