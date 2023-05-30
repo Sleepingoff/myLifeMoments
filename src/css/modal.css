@@ -1,12 +1,4 @@
-#login{
-    cursor: pointer;
-}
-#loginmodal{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-#loginmodal .close{
+#modal .close {
     background-color: transparent;
     border: none;
     background-image: url(../img/close.svg);
@@ -16,16 +8,35 @@
     height: 40px;
     align-self: flex-end;
 }
-#loginmodal input{
+
+#modal input {
     align-self: flex-end;
 }
-#loginmodal input:focus{
+
+#modal input:focus {
     background-color: #EE9999;
 }
-#loginmodal button.login:active{
+
+#modal .p18 {
+    width: 440px;
+    padding: 30px;
+}
+
+#login {
+    cursor: pointer;
+}
+
+#loginmodal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#loginmodal button.login:active {
     background-color: #EE9999;
 }
-.popup{
+
+#loginmodal .popup {
     display: block;
     position: fixed;
     z-index: 10;
@@ -36,7 +47,19 @@
     border-radius: 10px;
 }
 
-#loginmodal .p18{
-    width: 440px;
-    padding: 30px;
+#signmodal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#signmodal .popup {
+    display: block;
+    position: fixed;
+    z-index: 19;
+    top: calc(50% - 700px / 2);
+    left: calc(50% - 700px / 2);
+    width: 700px;
+    height: 700px;
+    border-radius: 10px;
 }
